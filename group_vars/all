@@ -10,10 +10,11 @@ locale: en_US.UTF-8
 
 # General settings
 env: production
-root_access: true
-deploy_user: deploy
+root_access: false
+ansible_user: admin
+deploy_user: admin
 home_dir: "/home/{{ deploy_user }}"
-deploy_password: test
+# deploy_password: get this value from the secrets file
 deploy_app_name: test
 deploy_server_hostname: 127.0.0.1
 consul_dir: "{{ home_dir }}/consul"
@@ -27,7 +28,7 @@ shared_public_dirs:
   - "system"
   - "ckeditor_assets"
 
-ssh_public_key_path: "~/.ssh/id_rsa.pub"
+ssh_public_key_path: "~/Documents/consul/consul.pem"
 
 # Ruby
 ruby_version: 2.4.9

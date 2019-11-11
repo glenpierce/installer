@@ -1,5 +1,11 @@
 # CONSUL Installer [![Build Status](https://travis-ci.org/consul/installer.svg?branch=master)](https://travis-ci.org/consul/installer)
 
+Notes from Glen:
+1. Run chmod 600 ansible.cfg # This makes the file read/writable only by the current user. Ansible won't use this file if it's globally writable.
+2. Setup Debian EC2 instance on AWS
+3. Run sudo apt-get install -y nodejs on that sever.
+4. Follow the rest of these instructions.
+
 [CONSUL](https://github.com/consul/consul) installer for production environments
 
 Using [Ansible](http://docs.ansible.com/), it will install and configure the following:

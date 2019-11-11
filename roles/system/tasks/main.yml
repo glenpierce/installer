@@ -18,11 +18,12 @@
   apt:
     name: apt-transport-https
 
-- name: Add Node repository
-  become: true
-  apt_repository:
-    repo: deb https://deb.nodesource.com/node_6.x bionic main
-    state: present
+# run sudo apt-get install -y nodejs instead
+#- name: Add Node repository
+#  become: true
+#  apt_repository:
+#    repo: deb https://deb.nodesource.com/node_6.x bionic main
+#    state: present
 
 - name: Add Node key
   become: yes
